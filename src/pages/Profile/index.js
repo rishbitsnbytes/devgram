@@ -74,7 +74,7 @@ const Profile = () => {
   return userProfileLoading ? (
     <section></section>
   ) : (
-    <section className="home p-8 px-0 md:px-8 border-0 md:border-l lg:border-r border-x-sky-400 flex flex-col items-center justify-start w-full gap-4">
+    <section className="home p-8 px-0 md:px-8 border-0 md:border-l lg:border-r border-x-pink-400 flex flex-col items-center justify-start w-full gap-4">
       <UserProfile
         userProfile={userProfile}
         userPostsLength={sortedPosts?.length}

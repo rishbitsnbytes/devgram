@@ -28,7 +28,7 @@ const LandingPage = () => {
                 src={logoImage}
                 alt="Devgram Logo"
               />
-              <h3 className="font-semibold text-3xl md:text-5xl text-sky-400 logo-text">
+              <h3 className="font-semibold text-3xl md:text-5xl text-pink-400 logo-text">
                 Devgram
               </h3>
             </div>

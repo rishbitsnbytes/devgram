@@ -83,7 +83,7 @@ const Navbar = () => {
               className="flex-shrink-0 flex gap-4 items-center"
             >
               <img className="h-10 w-auto" src={logoImage} alt="Devgram Logo" />
-              <h3 className="hidden md:block font-semibold text-3xl text-sky-400 logo-text">
+              <h3 className="hidden md:block font-semibold text-3xl text-pink-400 logo-text">
                 Devgram
               </h3>
             </Link>
@@ -107,7 +107,7 @@ const Navbar = () => {
                       value={searchQueryText}
                       autoComplete="off"
                       onChange={handleSearchTextChange}
-                      className="focus:ring-sky-500 focus:border-sky-500 block w-full pl-8 bg-transparent pr-2 py-1.5 sm:text-base mr-1  text-slate-900 border-gray-300 rounded-sm outline-none"
+                      className="focus:ring-pink-500 focus:border-pink-500 block w-full pl-8 bg-transparent pr-2 py-1.5 sm:text-base mr-1  text-slate-900 border-gray-300 rounded-sm outline-none"
                       placeholder="Search users..."
                     />
                   </div>
@@ -166,7 +166,7 @@ const Navbar = () => {
                   value={searchQueryText}
                   autoComplete="off"
                   onChange={handleSearchTextChange}
-                  className="focus:ring-sky-500 focus:border-sky-500 block w-full pl-8 bg-transparent pr-2 py-1.5 sm:text-base mr-1  text-slate-900 border-gray-300 rounded-sm outline-none"
+                  className="focus:ring-pink-500 focus:border-pink-500 block w-full pl-8 bg-transparent pr-2 py-1.5 sm:text-base mr-1  text-slate-900 border-gray-300 rounded-sm outline-none"
                   placeholder="Enter search text..."
                 />
               </div>

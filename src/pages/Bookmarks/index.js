@@ -17,7 +17,7 @@ const Bookmarks = () => {
   const { setDocumentTitle } = useDocumentTitle();
 
   useEffect(() => {
-    setDocumentTitle("ReadersSpace | Bookmarks");
+    setDocumentTitle("Devgram | Bookmarks");
     (async () => {
       try {
         const response = await dispatch(getBookmarks(authToken));
@@ -39,7 +39,7 @@ const Bookmarks = () => {
   return postsLoading ? (
     <Loader />
   ) : postsError ? (
-    <section className="home p-8 px-0 md:px-8 border-0 md:border-l lg:border-r border-x-sky-400 flex flex-col items-center justify-start w-full">
+    <section className="home p-8 px-0 md:px-8 border-0 md:border-l lg:border-r border-x-pink-400 flex flex-col items-center justify-start w-full">
       <div className="max-w-[1080px] w-full flex flex-col justify-start items-center">
         <h3 className="md:text-2xl text-red-500 font-semibold text-center text-base relative z-[2]">
           Some error occurred. Could not load posts. Please try again later.
@@ -52,7 +52,7 @@ const Bookmarks = () => {
       </div>
     </section>
   ) : (
-    <section className="p-0 md:px-8 border-0 md:border-l lg:border-r border-x-sky-400 flex flex-col items-center justify-start w-full">
+    <section className="p-0 md:px-8 border-0 md:border-l lg:border-r border-x-pink-400 flex flex-col items-center justify-start w-full">
       <div className="max-w-[1080px] w-full flex flex-col justify-start items-center">
         {sortedPosts?.length ? (
           <PostsList posts={sortedPosts} />

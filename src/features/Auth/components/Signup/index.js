@@ -143,8 +143,8 @@ const SignUp = () => {
 
   return (
     <section className="auth-container p-4 md:p-12 min-h-[90vh] w-full flex flex-col justify-center items-center my-8">
-      <div className="signup-container max-w-[500px] w-full mx-auto h-full flex flex-col justify-center items-center gap-8 drop-shadow bg-sky-300/10 rounded-sm md:p-5 p-3">
-        <h2 className="section-head auth-head text-sky-400 uppercase text-3xl md:text-4xl font-medium">
+      <div className="signup-container max-w-[500px] w-full mx-auto h-full flex flex-col justify-center items-center gap-8 drop-shadow bg-pink-300/10 rounded-sm md:p-5 p-3">
+        <h2 className="section-head auth-head text-pink-400 uppercase text-3xl md:text-4xl font-medium">
           Signup
         </h2>
         <form

@@ -1,12 +1,137 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
 
+/* @import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,800;1,900&display=swap"); */
+
+@import url("react-toastify/dist/ReactToastify.css");
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+	.disabled-btn {
+		@apply opacity-60 hover:bg-pink-400 cursor-not-allowed;
+	}
+
+	.disabled-icon-btn {
+		@apply opacity-60 hover:text-pink-400 cursor-not-allowed;
+	}
+}
+
 @layer base {
 	html {
-  font-family: 'PT Sans', sans-serif;
+		font-family: 'PT Sans', sans-serif;
 		box-sizing: border-box;
+	}
+
+	*,
+	*::after,
+	*::before {
+		box-sizing: inherit;
+	}
+
+	.logo-text {
+		font-family: "Architects Daughter", sans-serif;
+	}
+
+	@media screen and (min-width: 768px) {
+		.grid-container {
+			grid-template-columns: 200px 1fr;
+		}
+	}
+
+	@media screen and (min-width: 992px) {
+		.grid-container {
+			grid-template-columns: 200px 1fr 300px;
+		}
+	}
+
+	.label-text::after {
+		content: "*";
+		color: red;
+		position: absolute;
+		right: -10px;
+	}
+
+	svg.favorite-icon {
+		font-size: 1.15rem;
+	}
+
+	.progress-ring {
+		flex-shrink: 0;
+		cursor: auto;
+		width: 2rem;
+		height: 2rem;
+		border-radius: 50%;
+		position: relative;
+		@apply dark:bg-gray-100 bg-slate-900;
+	}
+
+	.progress-ring::after {
+		cursor: auto;
+		background-color: inherit;
+		position: absolute;
+		content: "";
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		border-radius: 50%;
+		height: 85%;
+		width: 85%;
+		@apply dark:bg-slate-900 bg-gray-100;
+	}
+
+	.progress-value {
+		cursor: auto;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		font-size: 0.7rem;
+		z-index: 2;
+		transform: translate(-50%, -50%);
+	}
+
+	.post-content {
+		overflow-wrap: break-word;
+	}
+
+	svg.mui {
+		height: 1rem;
+		width: 1rem;
+	}
+}
+
+@layer components {
+	.btn-primary {
+		@apply rounded-sm p-2 text-center text-slate-900 bg-pink-400 hover:bg-pink-500 transition-all ease-in font-medium;
+	}
+
+	.btn-primary-full {
+		@apply w-full bg-pink-400 inline-block py-1.5 px-2 rounded-sm text-slate-900 font-medium hover:bg-pink-500 transition-all ease-in text-base md:text-lg cursor-pointer;
+	}
+
+	.btn-primary-full-outline {
+		@apply w-full border text-gray-100 border-pink-400 inline-block py-1.5 px-2 rounded-sm font-medium hover:text-pink-500 transition-all ease-in text-base md:text-lg cursor-pointer;
+	}
+
+	.btn-primary-link {
+		@apply w-full text-center hover:text-pink-500 text-base transition-all ease-in md:text-lg cursor-pointer;
+	}
+
+	.auth-form-label {
+		@apply w-full md:text-lg text-sm dark:text-gray-100 text-slate-900;
+	}
+
+	.auth-form-input {
+		@apply py-1.5 dark:text-slate-900 border-none px-2 text-sm focus:bg-pink-100 rounded-sm outline-none inline-block w-full font-medium transition-all ease-linear;
+	}
+
+	.active-link {
+		@apply inline-block dark:bg-gray-100 dark:text-slate-900 bg-gray-200 md:bg-gray-100 text-slate-900;
+	}
+
+	.link {
+		@apply py-1 px-2 font-semibold hover:text-pink-500 w-full flex flex-row items-center justify-start gap-4 rounded-sm text-lg;
 	}
 }

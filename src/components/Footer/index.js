@@ -9,13 +9,13 @@ const Footer = () => {
           <a
             href="https://rishbitsnbytes.netlify.app/"
             target="_blank"
-            className="text-sky-400 hover:scale-95 transition-all ease-in"
+            className="text-pink-400 hover:scale-95 transition-all ease-in"
           >
             Rishabh Rathore
           </a>
         </p>
         <ul className="footer-navlinks flex flex-row items-center justify-center gap-4">
-          <li className="list-item hover:translate-y-[-7px] transition-all ease-in hover:text-sky-500 text-sky-400 text-xl">
+          <li className="list-item hover:translate-y-[-7px] transition-all ease-in hover:text-pink-500 text-pink-400 text-xl">
             <a
               href="https://twitter.com/rishbitsnbytes"
               target="_blank"
@@ -26,7 +26,7 @@ const Footer = () => {
               </span>
             </a>
           </li>
-          <li className="list-item hover:translate-y-[-7px] transition-all ease-in hover:text-sky-500 text-sky-400 text-xl">
+          <li className="list-item hover:translate-y-[-7px] transition-all ease-in hover:text-pink-500 text-pink-400 text-xl">
             <a
               href="https://github.com/rishbitsnbytes"
               target="_blank"
@@ -37,7 +37,7 @@ const Footer = () => {
               </span>
             </a>
           </li>
-          <li className="list-item hover:translate-y-[-7px] transition-all ease-in hover:text-sky-500 text-sky-400 text-xl">
+          <li className="list-item hover:translate-y-[-7px] transition-all ease-in hover:text-pink-500 text-pink-400 text-xl">
             <a
               href="https://www.linkedin.com/in/rishrathore/"
               className="btn btn-link"
@@ -48,7 +48,7 @@ const Footer = () => {
               </span>
             </a>
           </li>
-          <li className="list-item hover:translate-y-[-7px] transition-all ease-in hover:text-sky-500 text-sky-400 text-xl">
+          <li className="list-item hover:translate-y-[-7px] transition-all ease-in hover:text-pink-500 text-pink-400 text-xl">
             <a
               href="mailto:rishrathore1613@gmail.com"
               className="btn btn-link"

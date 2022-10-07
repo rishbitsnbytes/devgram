@@ -55,8 +55,8 @@ const SortOptions = () => {
           ref={sortOptionsReference}
         >
           <button
-            className={`btn-link p-1 font-semibold hover:text-sky-500 border-b w-full border-b-gray-400 ${
-              sortBy === "LATEST" ? "text-sky-400" : "text-inherit"
+            className={`btn-link p-1 font-semibold hover:text-pink-500 border-b w-full border-b-gray-400 ${
+              sortBy === "LATEST" ? "text-pink-400" : "text-inherit"
             } `}
             value="LATEST"
             onClick={(e) => handleChangeSortOptions(e, "LATEST")}
@@ -64,8 +64,8 @@ const SortOptions = () => {
             Latest <ArrowUpward />
           </button>
           <button
-            className={`btn-link p-1 font-semibold hover:text-sky-500 border-b w-full border-b-gray-400 ${
-              sortBy === "OLDEST" ? "text-sky-400" : "text-inherit"
+            className={`btn-link p-1 font-semibold hover:text-pink-500 border-b w-full border-b-gray-400 ${
+              sortBy === "OLDEST" ? "text-pink-400" : "text-inherit"
             } `}
             value="OLDEST"
             onClick={(e) => handleChangeSortOptions(e, "OLDEST")}
@@ -73,8 +73,8 @@ const SortOptions = () => {
             Oldest <ArrowDownward />
           </button>
           <button
-            className={`btn-link p-1 font-semibold hover:text-sky-500  ${
-              sortBy === "TRENDING" ? "text-sky-400" : "text-inherit"
+            className={`btn-link p-1 font-semibold hover:text-pink-500  ${
+              sortBy === "TRENDING" ? "text-pink-400" : "text-inherit"
             } `}
             value="TRENDING"
             onClick={(e) => handleChangeSortOptions(e, "TRENDING")}

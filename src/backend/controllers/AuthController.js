@@ -42,7 +42,7 @@ export const signupHandler = function (schema, request) {
       bookmarks: [],
       bio: "",
       profileImage:
-        "https://res.cloudinary.com/dylkclyom/image/upload/v1652861304/default_profile_400x400_kl4nw3.png",
+        "https://res.cloudinary.com/dpkrhg0er/image/upload/v1665138285/devgram/assets/dummy-profile-pic_iviqsv.webp",
       website: "",
     };
     const createdUser = schema.users.create(newUser);

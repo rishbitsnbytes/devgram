@@ -108,12 +108,12 @@ const EditProfileForm = () => {
         </div>
         <div className="img-container relative">
           <img
-            className="inline-block h-10 w-10 rounded-full ring-2 ring-sky-500 object-cover"
+            className="inline-block h-10 w-10 rounded-full ring-2 ring-pink-500 object-cover"
             src={profileImage}
             alt={`{username} display image`}
           />
           <label className="cursor-pointer absolute bottom-[-10px] right-[-5px]">
-            <InsertPhoto className="text-sky-500" />
+            <InsertPhoto className="text-pink-500" />
             <input
               type="file"
               name="profileImage"

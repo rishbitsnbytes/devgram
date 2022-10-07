@@ -149,7 +149,7 @@ const PostContainer = ({ container }) => {
     >
       <div className="flex flex-row items-start justify-between gap-4 w-full rounded-sm">
         <img
-          className="inline-block h-10 w-10 md:h-8 md:w-8 rounded-full ring-2 ring-sky-500 shrink-0 object-cover"
+          className="inline-block h-10 w-10 md:h-8 md:w-8 rounded-full ring-2 ring-pink-500 shrink-0 object-cover"
           src={profileImage}
           alt={`${username} profile image`}
         />
@@ -217,7 +217,7 @@ const PostContainer = ({ container }) => {
         </div>
         <div className="flex flex-row gap-4 justify-center items-center">
           <div
-            className={`flex flex-col items-center justify-center text-xs border-r-[50%] border-sky-500 ${
+            className={`flex flex-col items-center justify-center text-xs border-r-[50%] border-pink-500 ${
               wordCount <= 15
                 ? "text-red-500"
                 : "text-s;ate-900 dark:text-gray-100"
