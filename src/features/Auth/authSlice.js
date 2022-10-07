@@ -3,11 +3,11 @@ import { signupService } from "services";
 import { loginService } from "services/auth-services/loginService";
 
 const initialState = {
-  isAuth: localStorage.getItem("readers-space-token") === null ? false : true,
-  authToken: localStorage.getItem("readers-space-token") ?? null,
+  isAuth: localStorage.getItem("devgram-token") === null ? false : true,
+  authToken: localStorage.getItem("devgram-token") ?? null,
   authLoading: false,
   authError: null,
-  authUser: JSON.parse(localStorage.getItem("readers-space-user")) ?? null,
+  authUser: JSON.parse(localStorage.getItem("devgram-user")) ?? null,
 };
 
 export const loginUser = createAsyncThunk(
@@ -15,11 +15,8 @@ export const loginUser = createAsyncThunk(
   async (formData, { rejectWithValue }) => {
     try {
       const { data } = await loginService(formData);
-      localStorage.setItem("readers-space-token", data.encodedToken);
-      localStorage.setItem(
-        "readers-space-user",
-        JSON.stringify(data.foundUser)
-      );
+      localStorage.setItem("devgram-token", data.encodedToken);
+      localStorage.setItem("devgram-user", JSON.stringify(data.foundUser));
       return data;
     } catch (error) {
       return rejectWithValue(error.message);
@@ -32,11 +29,8 @@ export const signupUser = createAsyncThunk(
   async (formData, { rejectWithValue }) => {
     try {
       const { data } = await signupService(formData);
-      localStorage.setItem("readers-space-token", data.encodedToken);
-      localStorage.setItem(
-        "readers-space-user",
-        JSON.stringify(data.createdUser)
-      );
+      localStorage.setItem("devgram-token", data.encodedToken);
+      localStorage.setItem("devgram-user", JSON.stringify(data.createdUser));
       return data;
     } catch (error) {
       return rejectWithValue(error.message);
@@ -54,15 +48,12 @@ const authSlice = createSlice({
       state.authLoading = false;
       state.authError = null;
       state.authUser = null;
-      localStorage.removeItem("readers-space-token");
-      localStorage.removeItem("readers-space-user");
+      localStorage.removeItem("devgram-token");
+      localStorage.removeItem("devgram-user");
     },
     editAuthUser: (state, action) => {
       state.authUser = { ...state.authUser, ...action.payload };
-      localStorage.setItem(
-        "readers-space-user",
-        JSON.stringify(state.authUser)
-      );
+      localStorage.setItem("devgram-user", JSON.stringify(state.authUser));
     },
   },
   extraReducers: (builder) => {

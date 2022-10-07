@@ -79,9 +79,7 @@ const CommentInput = ({ postId, editCommentId, setEditCommentId }) => {
   const commentTextChange = (event) => setCommentText(event.target.value);
 
   const commentTextLength = 250 - commentText.trim().length;
-  const { profileImage } = JSON.parse(
-    localStorage.getItem("readers-space-user")
-  );
+  const { profileImage } = JSON.parse(localStorage.getItem("devgram-user"));
 
   return (
     <div className="flex flex-row gap-2 items-start justify-start fap-2 w-full rounded-sm">
