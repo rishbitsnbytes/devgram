@@ -52,8 +52,6 @@ export function makeServer({ environment = "development" } = {}) {
       users.forEach((item) =>
         server.create("user", {
           ...item,
-          followers: [],
-          following: [],
           bookmarks: [],
         })
       );
@@ -101,7 +99,7 @@ export function makeServer({ environment = "development" } = {}) {
       );
       // user routes (public)
       this.get("/users", getAllUsersHandler.bind(this));
-      this.get("/users/:userId", getUserHandler.bind(this));
+      this.get("/users/:username", getUserHandler.bind(this));
 
       // user routes (private)
       this.post("users/edit", editUserHandler.bind(this));
@@ -111,11 +109,13 @@ export function makeServer({ environment = "development" } = {}) {
         "/users/remove-bookmark/:postId/",
         removePostFromBookmarkHandler.bind(this)
       );
-      this.post("/users/follow/:followUserId/", followUserHandler.bind(this));
+      this.post("/users/follow/:followUsername/", followUserHandler.bind(this));
       this.post(
-        "/users/unfollow/:followUserId/",
+        "/users/unfollow/:followUsername/",
         unfollowUserHandler.bind(this)
       );
+      this.passthrough();
+      this.passthrough(process.env.REACT_APP_CLOUDINARY_URL);
     },
   });
 }
