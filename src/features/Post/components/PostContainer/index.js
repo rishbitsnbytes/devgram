@@ -137,7 +137,7 @@ const PostContainer = ({ container }) => {
   };
 
   const profileImage = JSON.parse(
-    localStorage.getItem("readers-space-user")
+    localStorage.getItem("devgram-user")
   ).profileImage;
 
   useOnOutsideClick(emojiRef, () => setShowEmojiPicker(false));

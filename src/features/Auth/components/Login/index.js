@@ -59,7 +59,7 @@ const Login = () => {
   };
 
   useEffect(() => {
-    setDocumentTitle("ReadersSpace | Login");
+    setDocumentTitle("Devgram | Login");
     if (isAuth) {
       navigate(-1, { replace: true });
     }
@@ -131,7 +131,7 @@ const Login = () => {
               onClick={handleLoginWithTestCredentials}
             />
             <Link to="/signup" className="btn-primary-link mt-2">
-              New to ReadersSpace? Sign up
+              New to Devgram? Sign up
             </Link>
           </div>
         </form>

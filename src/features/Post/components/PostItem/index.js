@@ -164,7 +164,7 @@ const PostItem = ({ post, location }) => {
 
   const profileImage =
     authUsername === username
-      ? JSON.parse(localStorage.getItem("readers-space-user")).profileImage
+      ? JSON.parse(localStorage.getItem("devgram-user")).profileImage
       : post.profileImage;
 
   const navigateToProfile = (event) => {

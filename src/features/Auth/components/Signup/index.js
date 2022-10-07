@@ -135,7 +135,7 @@ const SignUp = () => {
   };
 
   useEffect(() => {
-    setDocumentTitle("ReadersSpace | Signup");
+    setDocumentTitle("Devgram | Signup");
     if (isAuth) {
       navigate(-1, { replace: true });
     }
@@ -303,7 +303,7 @@ const SignUp = () => {
               }
             />
             <Link to="/login" className="btn-primary-link">
-              Already ReadersSpace member? Login
+              Already Devgram member? Login
             </Link>
           </div>
         </form>
