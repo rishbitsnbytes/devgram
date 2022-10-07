@@ -93,7 +93,7 @@ const Home = () => {
   return postsLoading ? (
     <Loader />
   ) : postsError ? (
-    <section className="home p-8 px-0 md:px-8 border-0 md:border-l lg:border-r border-x-sky-400 flex flex-col items-center justify-start w-full">
+    <section className="home p-8 px-0 md:px-8 border-0 md:border-l lg:border-r border-x-pink-400 flex flex-col items-center justify-start w-full">
       <div className="wrapper max-w-[1080px] flex flex-col items-center justify-start w-full">
         <h3 className="md:text-2xl text-red-500 font-semibold text-center text-base relative z-[2]">
           Some error occurred. Could not load posts. Please try again later.
@@ -106,7 +106,7 @@ const Home = () => {
       </div>
     </section>
   ) : (
-    <section className="home p-8 px-0 md:px-8 border-0 md:border-l lg:border-r border-x-sky-400 flex flex-col items-center justify-start w-full">
+    <section className="home p-8 px-0 md:px-8 border-0 md:border-l lg:border-r border-x-pink-400 flex flex-col items-center justify-start w-full">
       <div className="max-w-[1080px] w-full flex flex-col justify-start items-center gap-4">
         <div className="posts-container relative w-full">
           <PostContainer />

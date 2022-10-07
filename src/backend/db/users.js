@@ -91,6 +91,34 @@ export const users = [
         profileImage:
           "https://res.cloudinary.com/dpkrhg0er/image/upload/v1664957143/devgram/users/karansingh_bkeyyx.jpg",
       },
+      {
+        firstName: "Harshit",
+        lastName: "Sharma",
+        username: "harshitsharma",
+        profileImage:
+          "https://res.cloudinary.com/dpkrhg0er/image/upload/v1664957144/devgram/users/harshitsharma_muhahg.jpg",
+      },
+      {
+        firstName: "Akshay",
+        lastName: "Sinha",
+        username: "akshaysinha",
+        profileImage:
+          "https://res.cloudinary.com/dpkrhg0er/image/upload/v1664957144/devgram/users/akshaysinha_xqetbq.jpg",
+      },
+      {
+        firstName: "Warren",
+        lastName: "Wong",
+        username: "warrenwong",
+        profileImage:
+          "https://res.cloudinary.com/dpkrhg0er/image/upload/v1664957150/devgram/users/warrenwong_gbcsot.jpg",
+      },
+      {
+        firstName: "Ansh",
+        lastName: "Verma",
+        username: "anshverma",
+        profileImage:
+          "https://res.cloudinary.com/dpkrhg0er/image/upload/v1664957139/devgram/users/anshverma_mgrihf.jpg",
+      },
     ],
   },
   {

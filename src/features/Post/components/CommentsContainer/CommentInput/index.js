@@ -84,7 +84,7 @@ const CommentInput = ({ postId, editCommentId, setEditCommentId }) => {
   return (
     <div className="flex flex-row gap-2 items-start justify-start fap-2 w-full rounded-sm">
       <img
-        className="inline-block sm:w-8 sm:h-8 h-6 w-6 rounded-full ring-2 ring-sky-500 shrink-0 object-cover"
+        className="inline-block sm:w-8 sm:h-8 h-6 w-6 rounded-full ring-2 ring-pink-500 shrink-0 object-cover"
         src={profileImage}
         alt={`${username} profile image`}
       />
@@ -111,7 +111,7 @@ const CommentInput = ({ postId, editCommentId, setEditCommentId }) => {
             <div className="edit-buttons-container flex flex-row w-full gap-2 justify-end">
               <button
                 type="button"
-                className="btn-primary-link border border-sky-400 hover:border-sky-500 w-max py-1 px-2 disabled:disabled-btn text-xs"
+                className="btn-primary-link border border-pink-400 hover:border-pink-500 w-max py-1 px-2 disabled:disabled-btn text-xs"
                 onClick={handleCancelEditComment}
                 disabled={areCommentsLoading}
               >

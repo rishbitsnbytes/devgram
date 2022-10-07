@@ -80,10 +80,10 @@ const UsersList = ({ userList, inComponent }) => {
         <li className="flex flex-row items-start justify-between w-full">
           <div className="user-info gap-2 flex flex-row items-start justfiy-between">
             <img
-              className="cursor-pointer object-cover inline-block h-7 w-7 rounded-full ring-2 ring-sky-500"
+              className="cursor-pointer object-cover inline-block h-7 w-7 rounded-full ring-2 ring-pink-500"
               src={
                 profileImage ??
-                "https://res.cloudinary.com/dylkclyom/image/upload/v1652861304/default_profile_400x400_kl4nw3.png"
+                "https://res.cloudinary.com/dpkrhg0er/image/upload/v1665138285/devgram/assets/dummy-profile-pic_iviqsv.webp"
               }
               alt={`${user.username} profile picture`}
               onClick={(e) => handleUserInfoClicked(user.username)}

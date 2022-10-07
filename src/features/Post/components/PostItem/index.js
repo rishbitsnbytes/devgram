@@ -219,7 +219,7 @@ const PostItem = ({ post, location }) => {
         onClick={navigateToSinglePostView}
       >
         <img
-          className="inline-block h-10 w-10 md:h-8 md:w-8 rounded-full ring-2 ring-sky-500 shrink-0 object-cover"
+          className="inline-block h-10 w-10 md:h-8 md:w-8 rounded-full ring-2 ring-pink-500 shrink-0 object-cover"
           onClick={navigateToProfile}
           src={profileImage}
           alt={`${username} profile image`}
@@ -248,19 +248,19 @@ const PostItem = ({ post, location }) => {
         {authUsername === username ? (
           <div className="more-options-container relative">
             <button
-              className="text-sky-400 hover:text-sky-500"
+              className="text-pink-400 hover:text-pink-500"
               onClick={handleShowMoreOptionsChange}
             >
               <MoreHoriz />
             </button>
             <div
-              className={`options-container absolute flex-col right-0 top-[105%] w-max h-max dark:bg-slate-800 border border-sky-500 bg-slate-200 z-[3] ${
+              className={`options-container absolute flex-col right-0 top-[105%] w-max h-max dark:bg-slate-800 border border-pink-500 bg-slate-200 z-[3] ${
                 showMoreOptions ? "flex" : "hidden"
               }`}
               ref={moreOptionsReference}
             >
               <button
-                className="py-2 px-4 border-b dark:text-gray-100 hover:bg-gray-300 dark:hover:bg-slate-700 border-b-sky-500"
+                className="py-2 px-4 border-b dark:text-gray-100 hover:bg-gray-300 dark:hover:bg-slate-700 border-b-pink-500"
                 onClick={handleEditPost}
               >
                 Edit
@@ -283,13 +283,13 @@ const PostItem = ({ post, location }) => {
             } w-max`}
             onClick={handleShowLikedUserList}
           >
-            <Favorite className="text-sky-400 text-xs cursor-auto favorite-icon" />
+            <Favorite className="text-pink-400 text-xs cursor-auto favorite-icon" />
             {likedByText}
           </div>
         }
         <div className="flex flex-row justify-between items-center">
           <button
-            className="text-sky-400 hover:text-sky-500 disabled:disabled-icon-btn flex flex-row items-end justify-center gap-1 h-max"
+            className="text-pink-400 hover:text-pink-500 disabled:disabled-icon-btn flex flex-row items-end justify-center gap-1 h-max"
             onClick={handlePostLikeChange}
             disabled={loadingLikeService}
           >
@@ -301,7 +301,7 @@ const PostItem = ({ post, location }) => {
             ) : null}
           </button>
           <button
-            className="text-sky-400 hover:text-sky-500 flex flex-row items-end justify-center gap-1"
+            className="text-pink-400 hover:text-pink-500 flex flex-row items-end justify-center gap-1"
             onClick={navigateToSinglePostView}
           >
             <span className="like-icon">
@@ -310,14 +310,14 @@ const PostItem = ({ post, location }) => {
             {comments?.length}
           </button>
           <button
-            className="text-sky-400 hover:text-sky-500 disabled:disabled-icon-btn"
+            className="text-pink-400 hover:text-pink-500 disabled:disabled-icon-btn"
             onClick={handleBookmarkStateChange}
             disabled={loadingBookmarkService}
           >
             {isPostInBookmarks ? <Bookmark /> : <BookmarkBorder />}
           </button>
           <button
-            className="text-sky-400 hover:text-sky-500 disabled:disabled-icon-btn"
+            className="text-pink-400 hover:text-pink-500 disabled:disabled-icon-btn"
             onClick={handleCopyPostLinkToClipboard}
           >
             <Share />

@@ -102,7 +102,7 @@ const UserProfile = ({ userProfile, userPostsLength }) => {
 
   return (
     <div className="w-full h-max relative max-w-[1080px]">
-      <div className="image-container h-[8rem] w-full bg-sky-400 p-3 sm:p-5 ">
+      <div className="image-container h-[8rem] w-full bg-pink-400 p-3 sm:p-5 ">
         {authUsername === username ? (
           <button
             className="bg-slate-900 hover:bg-slate-800 transition-all ease-linear text-gray-100 px-2 py-1 rounded-sm absolute right-3 top-3 sm:top-5 sm:right-5"
@@ -115,7 +115,7 @@ const UserProfile = ({ userProfile, userPostsLength }) => {
           <img
             src={
               profileImage ??
-              "https://res.cloudinary.com/dylkclyom/image/upload/v1652861304/default_profile_400x400_kl4nw3.png"
+              "https://res.cloudinary.com/dpkrhg0er/image/upload/v1665138285/devgram/assets/dummy-profile-pic_iviqsv.webp"
             }
             alt={`${username} profile picture`}
             className="w-[10rem] h-[10rem] rounded-full object-cover"
@@ -147,7 +147,7 @@ const UserProfile = ({ userProfile, userPostsLength }) => {
                 <a
                   href={website}
                   target="_blank"
-                  className="text-sm text-sky-400 hover:text-sky-500 py-1 px-2 rounded-sm border  border-sky-400 text-center"
+                  className="text-sm text-pink-400 hover:text-pink-500 py-1 px-2 rounded-sm border  border-pink-400 text-center"
                 >
                   Visit Website <NorthEast fontSize="small" />
                 </a>
@@ -158,7 +158,7 @@ const UserProfile = ({ userProfile, userPostsLength }) => {
             <h6
               className={`${
                 usersFollowers?.length
-                  ? "cursor-pointer hover:underline hover:text-sky-500"
+                  ? "cursor-pointer hover:underline hover:text-pink-500"
                   : "cursor-default"
               }`}
               onClick={(e) => handleShowUserList(e, "FOLLOWERS")}
@@ -169,7 +169,7 @@ const UserProfile = ({ userProfile, userPostsLength }) => {
             <h6
               className={`${
                 usersFollowers?.length
-                  ? "cursor-pointer hover:underline hover:text-sky-500"
+                  ? "cursor-pointer hover:underline hover:text-pink-500"
                   : "cursor-default"
               }`}
               onClick={(e) => handleShowUserList(e, "FOLLOWING")}

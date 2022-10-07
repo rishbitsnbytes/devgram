@@ -51,7 +51,7 @@ const CommentsList = ({ post, setEditCommentId, editCommentId }) => {
           key={comment._id}
         >
           <img
-            className="inline-block w-8 h-8 cursor-pointer rounded-full ring-2 ring-sky-500 shrink-0 object-cover"
+            className="inline-block w-8 h-8 cursor-pointer rounded-full ring-2 ring-pink-500 shrink-0 object-cover"
             src={comment.profileImage}
             alt={`${comment.username} profile image`}
           />
