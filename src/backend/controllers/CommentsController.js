@@ -53,6 +53,7 @@ export const addPostCommentHandler = function (schema, request) {
       _id: uuid(),
       ...commentData,
       username: user.username,
+      profileImage: user.profileImage,
       votes: { upvotedBy: [], downvotedBy: [] },
       createdAt: formatDate(),
       updatedAt: formatDate(),
@@ -101,7 +102,9 @@ export const editPostCommentHandler = function (schema, request) {
       return new Response(
         400,
         {},
-        { errors: ["Cannot edit a comment doesn't belong to the User."] }
+        {
+          errors: ["Cannot edit a comment doesn't belong to the User."],
+        }
       );
     }
     post.comments[commentIndex] = {
@@ -153,7 +156,9 @@ export const deletePostCommentHandler = function (schema, request) {
       return new Response(
         400,
         {},
-        { errors: ["Cannot delete a comment doesn't belong to the User."] }
+        {
+          errors: ["Cannot delete a comment doesn't belong to the User."],
+        }
       );
     }
     post.comments = post.comments.filter(
@@ -211,7 +216,7 @@ export const upvotePostCommentHandler = function (schema, request) {
     post.comments[commentIndex].votes.downvotedBy = post.comments[
       commentIndex
     ].votes.downvotedBy.filter((currUser) => currUser._id !== user._id);
-    comments[commentIndex].votes.upvotedBy.push(user);
+    post.comments[commentIndex].votes.upvotedBy.push(user);
     this.db.posts.update({ _id: postId }, { ...post, updatedAt: formatDate() });
     return new Response(201, {}, { comments: post.comments });
   } catch (error) {
@@ -258,15 +263,17 @@ export const downvotePostCommentHandler = function (schema, request) {
       return new Response(
         400,
         {},
-        { errors: ["Cannot downvote a post that is already downvoted. "] }
+        {
+          errors: ["Cannot downvote a post that is already downvoted. "],
+        }
       );
     }
     post.comments[commentIndex].votes.upvotedBy = post.comments[
       commentIndex
     ].votes.upvotedBy.filter((currUser) => currUser._id !== user._id);
-    comments[commentIndex].votes.downvotedBy.push(user);
+    post.comments[commentIndex].votes.downvotedBy.push(user);
     this.db.posts.update({ _id: postId }, { ...post, updatedAt: formatDate() });
-    return new Response(201, {}, {  comments: post.comments  });
+    return new Response(201, {}, { comments: post.comments });
   } catch (error) {
     return new Response(
       500,
