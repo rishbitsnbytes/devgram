@@ -21,7 +21,7 @@ import { SearchResultsContainer } from "components";
 
 const Navbar = () => {
   const getSystemPreferenceThemeOrSavedTheme = () =>
-    localStorage.getItem("readers-space-theme") ||
+    localStorage.getItem("devgram-theme") ||
     (window.matchMedia("(prefers-color-scheme: dark)").matches
       ? "dark"
       : "light");
@@ -62,7 +62,7 @@ const Navbar = () => {
 
   useEffect(() => {
     document.body.className = theme;
-    localStorage.setItem("readers-space-theme", theme);
+    localStorage.setItem("devgram-theme", theme);
   }, [theme]);
 
   useEffect(() => {
@@ -82,13 +82,9 @@ const Navbar = () => {
               to={isAuth ? "/home" : "/"}
               className="flex-shrink-0 flex gap-4 items-center"
             >
-              <img
-                className="h-10 w-auto"
-                src={logoImage}
-                alt="Readers Space Logo"
-              />
+              <img className="h-10 w-auto" src={logoImage} alt="Devgram Logo" />
               <h3 className="hidden md:block font-semibold text-3xl text-sky-400 logo-text">
-                ReadersSpace
+                Devgram
               </h3>
             </Link>
             {isAuth ? (

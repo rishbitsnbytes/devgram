@@ -46,7 +46,7 @@ const SuggestedUsers = () => {
       dispatch(addSuggestedUsers(getUnfollowedUsers(users, username)));
       if (getUserDetails(users, username))
         localStorage.setItem(
-          "readers-space-user",
+          "devgram-user",
           JSON.stringify(getUserDetails(users, username))
         );
     }

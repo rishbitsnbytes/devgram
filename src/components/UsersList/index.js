@@ -36,7 +36,7 @@ const UsersList = ({ userList, inComponent }) => {
         );
       }
       localStorage.setItem(
-        "readers-space-user",
+        "devgram-user",
         JSON.stringify(response.payload.user)
       );
       showToast(
@@ -61,7 +61,7 @@ const UsersList = ({ userList, inComponent }) => {
   const mappedUsersList = userList?.map((user) => {
     let { firstName, lastName, profileImage } =
       user.username === username
-        ? JSON.parse(localStorage.getItem("readers-space-user"))
+        ? JSON.parse(localStorage.getItem("devgram-user"))
         : user;
 
     const following = getUserDetails(users, username)?.following;
